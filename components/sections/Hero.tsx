@@ -11,7 +11,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
         aria-hidden="true"
       >
-        <source src="/media/landing-page-v4.mp4" type="video/mp4" />
+        <source src="/media/landing-page-v2.mp4" type="video/mp4" />
       </video>
 
       {/* ── Dark green overlay ────────────────────────────────── */}
