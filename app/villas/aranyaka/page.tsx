@@ -22,38 +22,53 @@ export default function AranyakaPage() {
     <main className="bg-ivory text-green overflow-x-hidden">
 
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      {/* TOP FLOATING BUTTON                                        */}
+      {/* MINIMAL VILLA NAVBAR                                       */}
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <div
+      <header
         className="
           fixed top-0 left-0 w-full z-50
           px-6 md:px-10 lg:px-14
-          py-6
-          flex justify-end
+          py-5
         "
       >
+        <div className="flex items-center justify-between">
 
-        <a
-          href="/antaranya#villas"
-          className="
-            px-6 py-3
-            rounded-full
-            bg-[#f5f2eb]
-            border border-[#f5f2eb]/70
-            text-green
-            text-[10px]
-            tracking-[0.32em]
-            uppercase
-            shadow-[0_10px_30px_rgba(0,0,0,0.08)]
-            hover:bg-white
-            hover:scale-[1.03]
-            transition-all duration-500
-          "
-        >
-          Our Villas
-        </a>
+          {/* Logo */}
+          <a href="/antaranya">
+            <img
+              src="/media/silhaara-logo.png"
+              alt="Silhaara"
+              className="
+                h-12 md:h-14
+                w-auto
+                object-contain
+              "
+            />
+          </a>
 
-      </div>
+          {/* Our Villas Button */}
+          <a
+            href="/antaranya#villas"
+            className="
+              px-6 py-3
+              rounded-full
+              bg-[#f5f2eb]
+              border border-[#f5f2eb]/70
+              text-green
+              text-[10px]
+              tracking-[0.32em]
+              uppercase
+              shadow-[0_10px_30px_rgba(0,0,0,0.08)]
+              hover:bg-white
+              hover:scale-[1.03]
+              transition-all duration-500
+            "
+          >
+            Our Villas
+          </a>
+
+        </div>
+      </header>
 
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       {/* 1. FULLSCREEN HERO                                         */}
