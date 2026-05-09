@@ -1,0 +1,183 @@
+@import 'tailwindcss';
+
+/* ── Design tokens ──────────────────────────────────────────────────── */
+@theme {
+  --color-green: #203a36;
+  --color-gold: #e6c594;
+  --color-ivory: #f5f2eb;
+
+  --font-serif: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+/* ── Base ───────────────────────────────────────────────────────────── */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #203a36;
+  color: #f5f2eb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Keyframes ──────────────────────────────────────────────────────── */
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes slowCinematicZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollDrop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(5%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(5%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes reelScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ── Animation utility classes ─────────────────────────────────────── */
+
+.animate-reel {
+  animation: reelScroll 54s linear infinite;
+}
+
+.animate-slow-zoom {
+  animation: slowZoom 22s ease-in-out forwards;
+}
+
+.animate-slow-cinematic-zoom {
+  animation: slowCinematicZoom 7s ease-out forwards;
+}
+
+.animate-fade-up {
+  animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.animate-fade-up-delay {
+  opacity: 0;
+  animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1)
+    0.45s forwards;
+}
+
+.animate-fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease 0.9s forwards;
+}
+
+.animate-scroll-drop {
+  animation: scrollDrop 2.4s ease-in-out infinite;
+}
